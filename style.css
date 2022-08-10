@@ -1,100 +1,246 @@
 :root {
-    --text-color:#f0f4f5;
-    --backgroundcolor:#263343;
-    --accent-color:#d49466;
+    /*Color*/
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color: #e0e0e0;
+
+    /*Size*/
+    --padding: 12px;
+    --avatar-size: 36px;
+    --icon-size:16px;
+
+    /*Font Size*/
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
 }
-body {
+
+* {
+    padding: 0;
     margin: 0;
-    font-family: 'Source Sans Pro';
+    box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-    color: var(--text-color);
+body {
+    font-family: Roboto;
 }
 
-.navbar {
+ul{
+    list-style: none;
+}
+
+button,
+button:focus {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #00ff0000;
+}
+
+/*Header*/
+header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: #263343;
-    padding: 8px 12px;
+    padding: var(--padding);
+    background-color: var(--black-color);
+    color: var(--white-color);
 }
 
-.navbar__logo {
-    font-style: 24px;
-    color: var(--text-color);
+header .logo {
+    font-size: var(--font-large);
+    font-weight: bold;
 }
 
-.navbar__logo i {
-    color: #d49466;
+header .logo i {
+    color:var(--red-color);
 }
 
-.navbar_menu {
-    display: flex;
-    list-style: none;
-    padding-left: 0%;
+header .icons .fas fa-search {
+    margin-right: var(--padding);
 }
 
-.navbar_menu li {
-    padding: 8px 12px;
-}
-
-.navbar_menu li:hover {
-    background-color: grey;
-    border-radius: 4px;
-}
-
-.navbar_icons {
-    list-style: none;
-    color: white;
-    display: flex;
-    padding-left: 0%;
-}
-
-.navbar_icons li {
-    padding: 8px 12px;
-}
-
-.navbar_toggleBtn {
-    display: none;
-    position: absolute;
-    right: 32px;
-    font-size: 24px;
-    color: #d49466;
-}
-
-@media screen and (max-width:768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 8px 24px;
-    }
-
-    .navbar_menu {
-        display:none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-}
-
-.navbar_menu li {
-    width: 100%;
+/*video Player*/
+.player {
+    position: sticky;
+    top: 0;
     text-align: center;
+    background-color: var(--black-color);
 }
 
-.navbar_icons {
-    display:none;
-    justify-content: center;
+.player video {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+/*video Info*/
+body .infoAndUpNext .info {
+    padding: var(--padding);
+}
+
+.infoAndUpNext .info .metadata .hashtags {
+    display: flex;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+.infoAndUpNext .info .metadata .hashtags li {
+    margin-right: var(--padding);
+}
+
+.infoAndUpNext .info .metadata .titleAndButton {
+    display: flex;
+}
+
+.infoAndUpNext .info .metadata .titleAndButton .title {
+    font-size: var(--font-medium);
+    margin-right: var(--padding);
+}
+
+.title .clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.infoAndUpNext .info .metadata .titleAndButton .moreBtn {
+    height:100%;
+}
+
+.moreBtn.clicked {
+    transform: rotate(180deg);
+    transition: transform 300ms ease-in-out;
+}
+
+.infoAndUpNext .info .metadata .views {
+    font-size:var(--font-small);
+    color : var(--grey-dark-color);
+}
+
+/* Action Buttons */
+
+.infoAndUpNext .info .actions {
+    display: flex;
+    justify-content: space-around;
+    font-size: var(--font-small);
+    margin:var(--padding) 0;
+}
+
+.infoAndUpNext .info .actions button {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.infoAndUpNext .info .actions button i {
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding) / 2);
+    font-size: 16px;
+}
+
+.infoAndUpNext .info .actions button i.active {
+    color: var(--blue-color);
+}
+
+/* Channel Description */
+.infoAndUpNext .info .channel {
+    display : flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+}
+
+.infoAndUpNext .info .channel .metadata {
+    display: flex;
+    align-items: center;
+}
+
+.infoAndUpNext .info .channel .metadata img {
+    width:var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+}
+
+.infoAndUpNext .info .channel .metadata .info {
+    display: flex;
+    flex-direction: column;
+    }
+
+.infoAndUpNext.info .channel .metadata .info .name {
+    font-size: var(--font-medium);
+}
+
+.infoAndUpNext .info .channel .metadata .info .subscribers {
+    font-size: var(--font-small);
+    color:var(--grey-dark-color)
+}
+
+.infoAndUpNext .info .channel .subscribe {
+    text-transform: uppercase;
+    color:var(--red-color);
+    font-size: var(--font-medium);
+}
+
+/*Up Next*/ 
+.upNext {
+    padding : 0 var(--padding);
+    margin-bottom: var(--padding);
+}
+
+.upNext > .title {
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+    margin-bottom: calc(var(--padding)/2);
+}
+
+.upNext .item {
+    display : flex;
+    margin-top: var(--padding);
+}
+
+.upNext .item .img {
+    flex: 1 1 35%;
+    margin-right: var(--padding);
+}
+
+.upNext .item .img img {
     width: 100%;
 }
 
-.navbar_toggleBtn {
-    display: block;
-}
-.navbar_menu.active,
-.navbar_icons.active {
-    display : flex;
+.upNext .item .info {
+    flex:1 1 60%;
+    padding : 0;
 }
 
+.upNext .item .moreBtn {
+    flex : 1 1 5%;
+}
+
+.upNext .item .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.upNext .item .info .name,
+.upNext .item .info .views {
+    font-size: var(--font-small);
+    color:var(--grey-dark-color);
+}
+
+.infoAndUPNext {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .infoAndUpNext {
+       flex-direction: row; 
+       margin: var(--padding) 0;
+}
+
+}
