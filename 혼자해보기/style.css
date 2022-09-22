@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Hahmlet', serif;
-    background-color: rgb(255, 238, 238);
+    background: linear-gradient(to bottom right,  #EC9ED2, #FFA3B8, #FFB594, #FFD475,  #F9F871);
 }
 
 a {
@@ -13,6 +13,7 @@ a {
 
 a:hover {
     background-color: rgb(255, 215, 222);
+    border-radius: 30%;
 }
 
 h1 {
@@ -22,6 +23,13 @@ h1 {
     padding: 20px;
 }
 
+h2 {
+    padding-top: 20px;
+    color: rgb(118, 118, 118);
+    display:flex;
+    justify-content: space-around;
+    font-size: medium;
+}
 img {
     width:80%;
     padding: 10%;
@@ -44,7 +52,7 @@ img {
 .navbar_icon {
     padding-top: 2%;
     list-style: none;
-    color: lightpink;
+    color: rgb(255, 246, 247);
     display: flex;
     justify-content: space-around;
 }
@@ -56,7 +64,7 @@ footer {
     color: darkgray;
 }
 
-@media screen and (max-width: 478px) {
+@media (max-width: 478px) {
     body {
         color: #b39ddb;
     }
