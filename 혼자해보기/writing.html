@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing</title>
+    <script src="https://kit.fontawesome.com/3ca0970262.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet&family=Raleway:wght@500&family=Song+Myung&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <header class="page-header">
+        <h1> 감 정 일 기 </h1>
+        </header>
+
+    <nav class="navbar">
+        <div class="navbar_logo">  
+        </div>
+
+        <ul class="navbar_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="writing.html">Writing</a></li>
+            <li><a href="emotion.html">Emotion</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+
+    </nav>
+
+    <section>
+    <span> 오늘의 감정 </span>
+    <ul class="face">
+        <li><button><i class="fa-regular fa-face-smile"></i></button></li>
+        <li><button><i class="fa-regular fa-face-sad-tear"></i></button></li>
+        <li><button><i class="fa-regular fa-face-grin-hearts"></i></button></li>
+        <li><button><i class="fa-regular fa-face-grin-tears"></i></button></li>
+        <li><button><i class="fa-regular fa-face-angry"></i></button></li>
+    </ul>
+
+        <div class="container">
+            <form action="diary">
+        
+            <label for="title">제목</label>
+            <input type="text" id="title" name="firstname" placeholder="오늘의 일기">
+
+            <label for="date">날짜</label>
+            <input type="text" id="date" name="firstname" placeholder="2022/00/00">
+        
+            <label for="emotion">감정</label>
+            <select id="emotion" name="emotion">
+                <option value="australia">기쁨</option>
+                <option value="canada">슬픔</option>
+                <option value="usa">행복</option>
+            </select>
+        
+            <label for="subject">내용</label>
+            <textarea id="subject" name="subject" placeholder="내용을 입력하세요." style="height:200px"></textarea>
+        
+            <input type="submit" value="올리기">
+        
+            </form>
+        </div>
+    </section>
+
+    <article>
+    </article>
+    <script src="js/date.js"></script>
+</body>
+</html>
