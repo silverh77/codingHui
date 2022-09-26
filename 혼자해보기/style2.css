@@ -60,8 +60,13 @@ button {
 
 button:hover {
     color: palevioletred;
-
 }
+
+.face:hover i {
+    transition: all 0.5s linear;
+    
+}
+
 
 input[type=text], select, textarea {
     font-family: 'Hahmlet', serif;
@@ -77,8 +82,16 @@ input[type=text], select, textarea {
     resize: vertical;
 }
 
+input[type=date] {
+    font-family: 'Hahmlet', serif;
+    color:#8b6da6;
+    border: 0;
+    padding:10px 10px;
+    font-size: 15px;
+    
+}
 
-input[type=submit] {
+input[type=button] {
     font-family: 'Hahmlet', serif;
     background-color: #c6aadf;
     font-size: 15px;
@@ -87,6 +100,18 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+input[type=button]:hover {
+    background-color: rgb(218, 150, 173);
+    color: white;
+}
+
+
+option {
+    color:rgb(124, 124, 124);
+    background-color: rgb(236, 223, 225);
 }
 
 .container {

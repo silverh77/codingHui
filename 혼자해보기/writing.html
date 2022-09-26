@@ -31,7 +31,7 @@
     <section>
     <span> 오늘의 감정 </span>
     <ul class="face">
-        <li><button><i class="fa-regular fa-face-smile"></i></button></li>
+        <li><button><i class="fa-regular fa-face-smile fa-bounce"></i></button></li>
         <li><button><i class="fa-regular fa-face-sad-tear"></i></button></li>
         <li><button><i class="fa-regular fa-face-grin-hearts"></i></button></li>
         <li><button><i class="fa-regular fa-face-grin-tears"></i></button></li>
@@ -42,25 +42,27 @@
             <form action="diary">
         
             <label for="title">제목</label>
-            <input type="text" id="title" name="firstname" placeholder="오늘의 일기">
-
-            <label for="date">날짜</label>
-            <input type="text" id="date" name="firstname" placeholder="2022/00/00">
-        
+            <input type="text" id="title" name="firstname">
+            
+            <label for="date">날짜</label><br><br>
+            <input type="date" id="date" > <br><br>
+            
             <label for="emotion">감정</label>
             <select id="emotion" name="emotion">
-                <option value="australia">기쁨</option>
-                <option value="canada">슬픔</option>
-                <option value="usa">행복</option>
+                <option value="joy">기분이 좋아요 😆 </option>
+                <option value="sad">슬퍼요 😭</option>
+                <option value="happy">행복해요 🥰</option>
             </select>
         
             <label for="subject">내용</label>
-            <textarea id="subject" name="subject" placeholder="내용을 입력하세요." style="height:200px"></textarea>
+            <textarea id="subject" name="subject"  style="height:200px"></textarea>
         
-            <input type="submit" value="올리기">
+            <input type="button" value="올리기">
         
             </form>
         </div>
+
+        
     </section>
 
     <article>
